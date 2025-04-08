@@ -6,7 +6,8 @@ import configparser
 from sentence_transformers import SentenceTransformer
 
 # Load config
-config_path = os.getenv("RAGLITE_CONFIG", "../config.ini")
+config_path = os.getenv(
+    "RAGLITE_CONFIG", "/mnt/lts/projects/raglite/config.ini")
 config = configparser.ConfigParser()
 config.read(config_path)
 
