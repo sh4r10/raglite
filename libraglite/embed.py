@@ -15,11 +15,12 @@ config.read(config_path)
 target_path = config["paths"]["target_path"]
 faiss_path = config["paths"]["faiss_path"]
 sqlite_path = config["paths"]["sqlite_path"]
-model_name = config["model"]["model_name"]
+model_name = config["models"]["embedding_model"]
 
 
 def initDB():
     # Setup SQLite
+    print(sqlite_path)
     conn = sqlite3.connect(sqlite_path)
     cur = conn.cursor()
     cur.execute("""
